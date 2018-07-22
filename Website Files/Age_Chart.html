@@ -10,25 +10,27 @@
     <title>Race Chart</title>
 </head>
 <body>
-<div class="container">
-    <canvas id="AgeChart"></canvas>
+<div id="full-size">
+    <canvas id="AgeChart" ></canvas>
 </div>
 <script>
     let AgeChart=document.getElementById('AgeChart').getContext('2d');
     //Global options
-    //hides dataset label(s) and legend
-    Chart.defaults.global.legend.display = true;
-    Chart.defaults.global.defaultFontFamily='Helvetica';
-    // Chart.defaults.global.defaultFontSize=18;
-    Chart.defaults.global.defaultFontColor='#ffffff';
+        //hides dataset label(s) and legend
+        Chart.defaults.global.legend.display = true;
+        Chart.defaults.global.defaultFontFamily='Helvetica';
+        // Chart.defaults.global.defaultFontSize=18;
+        Chart.defaults.global.defaultFontColor='#ffffff';
+        // Chart.defaults.scale.gridLines.display = false;
+
     //Change color of chart's background
-    Chart.plugins.register({
-        beforeDraw: function(chartInstance) {
-            var ctx = chartInstance.chart.ctx;
-            ctx.fillStyle = "#262626";
-            ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
-        }
-    });
+        Chart.plugins.register({
+            beforeDraw: function(chartInstance) {
+                var ctx = chartInstance.chart.ctx;
+                ctx.fillStyle = '#343332';
+                ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+            }
+        });
 
     let newChartObject=new Chart(AgeChart, {
         type: 'doughnut',
