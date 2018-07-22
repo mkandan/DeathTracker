@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Chart.js test</title>
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-
-    <body>
+    <title>Chart.js test</title>
+  </head>
+  <body>
       <div class="container">
         <canvas id="myChartJSChart"></canvas>
       </div>
@@ -13,13 +17,33 @@
       <script>
           let myChartJSChart=document.getElementById('myChartJSChart').getContext('2d');
 
-          let newChartObject=new Chart(myChartJSChart,{type: 'bar'//bar, horizontalBar, pie, doughnut, polarArea}
-            , data:{
-              labels:['Label1','Label2','Label3'],
-              datasets:[]
-            },
-            options:{}
+          let newChartObject=new Chart(myChartJSChart, {
+              type: 'bar',
+              data: {
+                  labels: ['Label1', 'Label2', 'Label3', 'Label4'],
+                  datasets: [{
+                      label: 'Dataset_label',
+                      data: [
+                          123,
+                          234,
+                          345,
+                          456
+                      ],
+                      // backgroundColor:'green' //makes all bars green color
+                      backgroundColor:[
+                          'rgba(166, 138, 0, 1)',
+                          'rgba(44, 102, 0, 1)',
+                          'rgba(51, 4, 77, 1)',
+                          'rgba(2, 60, 71, 1)'
+                          /*'rgba(255, 99, 132, 0.6)',
+                          'rgba(54, 162, 235, 0.6)',
+                          'rgba(255, 206, 86, 0.6)',
+                          'rgba(2, 60, 71, 1)',*/
+                      ]
+                  }]
+              },
+              options: {}
+          });
       </script>
-    </body>
-  </head>
+  </body>
 </html>
