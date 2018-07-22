@@ -16,9 +16,14 @@
 
       <script>
           let myChartJSChart=document.getElementById('myChartJSChart').getContext('2d');
+          //Global options
+          // Chart.defaults.global.defaultFontFamily='Lato';
+          // Chart.defaults.global.defaultFontSize=18;
+          // Chart.defaults.global.defaultFontColor='#000';
+
 
           let newChartObject=new Chart(myChartJSChart, {
-              type: 'bar',
+              type: 'horizontalBar',
               data: {
                   labels: ['Label1', 'Label2', 'Label3', 'Label4'],
                   datasets: [{
@@ -33,17 +38,41 @@
                       backgroundColor:[
                           'rgba(166, 138, 0, 1)',
                           'rgba(44, 102, 0, 1)',
-                          'rgba(51, 4, 77, 1)',
+                          'rgba(111,0,78, 1)',
                           'rgba(2, 60, 71, 1)'
                           /*'rgba(255, 99, 132, 0.6)',
                           'rgba(54, 162, 235, 0.6)',
                           'rgba(255, 206, 86, 0.6)',
                           'rgba(2, 60, 71, 1)',*/
-                      ]
+                      ],
+                      // borderWidth:1,
+                      // borderColor:'#777'
+                      hoverBorderWidth:'2',
+                      hoverBorderColor:'#000'
                   }]
               },
-              options: {}
+              options: {
+                  title:{
+                      display:true,
+                      text:'Pedestrian Collisions (2018)',
+                      fontsize:25
+                  },
+                  legend:{
+                      position:'right'
+                  },
+                  // layout:{
+                  //     padding:{
+                  //         left:50
+                  //     }
+                  // }
+                  tooltips:{
+                      enabled:false
+                  }
+              }
           });
       </script>
+
+
+
   </body>
 </html>
