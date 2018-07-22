@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chart.js test</title>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+    <body>
+      <div class="container">
+        <canvas id="myChartJSChart"></canvas>
+      </div>
+
+      <script>
+          let myChartJSChart=document.getElementById('myChartJSChart').getContext('2d');
+
+          let newChartObject=new Chart(myChartJSChart,{type: 'bar'//bar, horizontalBar, pie, doughnut, polarArea}
+            , data:{
+              labels:['Label1','Label2','Label3'],
+              datasets:[]
+            },
+            options:{}
+      </script>
+    </body>
+  </head>
+</html>

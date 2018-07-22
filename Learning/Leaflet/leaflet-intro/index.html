@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang-"en">
+<head>
+  <meta charset="ut-8">
+  <title> My Leaflet Intro Website</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+  <style>
+    #mapContainer{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+
+
+
+
+</head>
+<body>
+  <div id="mapContainer"></div>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+  <script>
+    //instantiate Leaflet
+    var map = L.map('mapContainer').setView([33.4484,-112.0740],14)
+
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // }).addTo(map);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWthbmRhbiIsImEiOiJjampkc3hpanI0YW90M3FwZ2Q2NDRyd3JoIn0.FDVtDUviT2_lrRcvZWDSZw').addTo(map)
+
+          // map.addLayer(layer);
+
+    L.marker([33.488311,-111.924782],['Raymond_Test']).addTo(map)
+    .bindPopup('Blah blah')
+    // .openPopup();
+    // L.marker([33.449184,-112.077019]).addTo(map)
+    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    // L.marker([33.449184,-112.077019]).addTo(map)
+    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    // L.marker([33.449184,-112.077019]).addTo(map)
+    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+
+  </script>
+
+</body>
+</html>
