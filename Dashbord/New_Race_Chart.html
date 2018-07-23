@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <title>Race Chart</title>
+    </head>
+
+    <body>
+        <div style="full-size">
+            <canvas id="RaceChart"></canvas>
+        </div>
+        <script>
+            let RaceChart = document.getElementById('RaceChart').getContext('2d');
+            //Global options
+            //hides dataset legend
+            Chart.defaults.global.legend.display = true;
+            Chart.defaults.global.defaultFontFamily = 'Helvetica';
+            // Chart.defaults.global.defaultFontSize=18;
+            Chart.defaults.global.defaultFontColor = '#ffffff';
+            Chart.defaults.scale.gridLines.display = false;
+
+
+            //Change color of chart's background
+            Chart.plugins.register({
+                beforeDraw: function(chartInstance) {
+                    var ctx = chartInstance.chart.ctx;
+                    ctx.fillStyle = "#343332";
+                    ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+                }
+            });
+
+            let newChartObject = new Chart(RaceChart, {
+                type: 'horizontalBar',
+                data: {
+                    // labels:['Collisions'],
+                    datasets:[{
+                        label:'Black',
+                        backgroundColor:'rgba(44,90,109,1.5)',
+                        hoverBorderWidth:'2',//or just 2?
+                        hoverBorderColor:'#000',
+                        data:[
+                            31
+                        ]
+                    },{
+                        label:'Hispanic/Latino',
+                        backgroundColor:'rgba(54, 5, 104, 1)',
+                        hoverBorderWidth:'2',
+                        hoverBorderColor:'#000',
+                        data:[
+                            41
+                        ]
+                    },{
+                        label:'White',
+                        backgroundColor:'rgba(175, 91, 91, 1)',
+                        hoverBorderWidth:'2',
+                        hoverBorderColor:'#000',
+                        data:[
+                            9
+                        ]
+                    },{
+                        label:'Native American',
+                        backgroundColor:'rgba(30, 102, 16, 1)',
+                        hoverBorderWidth:'2',
+                        hoverBorderColor:'#000',
+                        data:[
+                            19
+                        ]
+                    },{
+                        label:'Asian/Pacific Islander',
+                        backgroundColor:'rgba(175, 173, 17,1)',
+                        hoverBorderWidth:'2',
+                        hoverBorderColor:'#000',
+                        data:[
+                            8
+                        ]
+                    }]
+                },
+                options: {
+                    title: {
+                        display: false,
+                        text: 'Pedestrian Collisions (2018)',
+                        fontsize: 25
+                    },
+                    legend: {
+                        position: 'right'
+                    },
+                    scales: {
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Collisions'
+                            }
+                        }]
+                    },
+                    tooltips: {
+                        enabled: true
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
