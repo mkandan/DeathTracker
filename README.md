@@ -1,8 +1,6 @@
 ## Live links
-- Map (mine/new) https://mkandan.github.io/leaflet-storymaps-with-google-sheets
-- Map (old) http://datavizforall.github.io/leaflet-storymaps-with-google-sheets/index.html
-- Google Sheets template (mine/new) https://docs.google.com/spreadsheets/d/1vtIhGAmdVBCyNO4Q7U7Cs3zlkJA15U3m-T16EetYzy8/edit#gid=0
-- Google Sheets template (old) https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/
+- Map https://mkandan.github.io/leaflet-storymaps-with-google-sheets
+- Google Sheets template https://docs.google.com/spreadsheets/d/1vtIhGAmdVBCyNO4Q7U7Cs3zlkJA15U3m-T16EetYzy8/edit#gid=0
 
 ## Credits (and licenses)
 Developed by [Ilya Ilyankou](https://github.com/ilyankou) and [Jack Dougherty](https://github.com/jackdougherty) with support from Trinity College CT, using a [Google Sheets](https://www.google.com/sheets/about/) template, with these open-source components:
