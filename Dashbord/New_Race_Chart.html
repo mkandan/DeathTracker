@@ -85,19 +85,31 @@
                     title: {
                         display: false,
                         text: 'Pedestrian Collisions (2018)',
-                        fontsize: 25
+                        fontSize: 25
                     },
                     legend: {
-                        position: 'right'
+                        position: 'right',
+                        labels: {
+                            fontSize: 14,
+                            fontFamily:'Helvetica'
+                        }
                     },
-                    scales: {
+                    /*scales: {
                         xAxes: [{
+                            ticks: {
+                                fontSize:15,
+                                fontFamily:'Helvetica'
+                            },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Collisions'
+                                labelString: 'Collisions',
+                                fontFamily:'Helvetica',
+                                fontSize: 20,
+                                fontColor: '#A4302A',
+                                fontStyle: 'bold'
                             }
                         }]
-                    },
+                    },*/
                     tooltips: {
                         enabled: true
                     }
