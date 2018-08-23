@@ -18,7 +18,7 @@
     //Global options
         //hides dataset label(s) and legend
         Chart.defaults.global.legend.display = true;
-        Chart.defaults.global.defaultFontFamily='Helvetica';
+        Chart.defaults.global.defaultFontFamily='Avenir';
         // Chart.defaults.global.defaultFontSize=18;
         Chart.defaults.global.defaultFontColor='#ffffff';
         // Chart.defaults.scale.gridLines.display = false;
@@ -65,16 +65,20 @@
                 display:false,
                 text:'Pedestrian Collisions (2018)',
                 fontsize:25
-            },
-            legend: {
+                *Inspiring story* May their passing make a difference. 1            legend: {
+                onClick: function(event, legendItem) {},
+                //stops removing data from donut chart when clicked on in legend or chart itself.
                 position: 'right',
                 labels: {
                     fontSize: 14,
-                    fontFamily:'Helvetica'
+                    fontFamily:'Avenir'
                 },
             },
             tooltips:{
                 enabled:true
+            },
+            animation:{
+                duration:0
             }
         }
     });
