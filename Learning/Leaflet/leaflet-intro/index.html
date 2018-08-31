@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang=en">
+<html lang="en">
 <head>
   <meta charset="ut-8">
   <title> My Leaflet Intro Website</title>
@@ -14,10 +14,6 @@
       left: 0;
     }
   </style>
-
-
-
-
 </head>
 <body>
   <div id="mapContainer"></div>
@@ -25,10 +21,6 @@
   <script>
     //instantiate Leaflet
     var map = L.map('mapContainer').setView([33.4484,-112.0740],14)
-
-    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    // }).addTo(map);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWthbmRhbiIsImEiOiJjampkc3hpanI0YW90M3FwZ2Q2NDRyd3JoIn0.FDVtDUviT2_lrRcvZWDSZw').addTo(map)
 
@@ -48,14 +40,6 @@
     L.marker([33.4228400,-111.7193169],['10th Crash']).addTo(map).bindPopup('Higley Rd. / University Rd.')
     L.marker([33.5094512,-112.1256012],['11th Crash']).addTo(map).bindPopup('31st Ave. / Camelback Rd.')
     L.marker([33.4510824,-112.1175183],['12th Crash']).addTo(map).bindPopup('27th Ave. / Van Buren St.')
-    // .openPopup();
-    // L.marker([33.449184,-112.077019]).addTo(map)
-    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    // L.marker([33.449184,-112.077019]).addTo(map)
-    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    // L.marker([33.449184,-112.077019]).addTo(map)
-    // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-
   </script>
 
 </body>
